@@ -523,8 +523,40 @@ res <-  tabPanel(
                          )
                   )
                 )),
-                tabPanel("Python", verbatimTextOutput("summary")),
-                tabPanel("SQL", tableOutput("table")),
+                tabPanel("Python",     fluidRow(
+                  tabsetPanel(type = "tabs",
+                              tabPanel("os", plotOutput("plot")),
+                              tabPanel("numpy", verbatimTextOutput("summary")),
+                              tabPanel("pandas", tableOutput("table")),
+                              tabPanel("matplotlib", tableOutput("table")),
+                              tabPanel("scipy", tableOutput("table")),
+                              tabPanel("random", tableOutput("table")),
+                              tabPanel("py2", tableOutput("table")),
+                              tabPanel("py3", tableOutput("table")),
+                              tabPanel("py4", tableOutput("table")),
+                              tabPanel("py5", tableOutput("table"))
+                              
+                  )
+                )),
+                tabPanel("SQL", fluidRow(
+                  tabsetPanel(type = "tabs",
+                              tabPanel("connection & Login", plotOutput("plot")),
+                              tabPanel("table", verbatimTextOutput("summary")),
+                              tabPanel("select", tableOutput("table")),
+                              tabPanel("update", tableOutput("table")),
+                              tabPanel("delete", tableOutput("table")),
+                              tabPanel("insert", tableOutput("table")),
+                              tabPanel("view", tableOutput("table")),
+                              tabPanel("index", tableOutput("table")),
+                              tabPanel("store procedure", tableOutput("table")),
+                              tabPanel("trigger", tableOutput("table")),
+                              tabPanel("cursor", tableOutput("table")),
+                              tabPanel("transaction and lock", tableOutput("table")),
+                              tabPanel("backup & restore", tableOutput("table")),
+                              tabPanel("safety", tableOutput("table"))
+                              
+                  )
+                )),
                 tabPanel("NoSQL", tableOutput("table")),
                 tabPanel("Julia", tableOutput("table")),
                 tabPanel("Go", tableOutput("table")),
