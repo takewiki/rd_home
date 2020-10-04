@@ -44,22 +44,25 @@ fluidPage(
   ),
   tabsetPanel(
     id = "mainnav",
-    rowItem(),
+    
     columnItem(),
     majourityItem(),
+    rowItem(),
+   
     seriesItem(),
     bookItem()
    
 
   ,
+  masterItem(),
   tutorItem()
    ,
     
   guruItem()
 
-   ,
+   
 
-   masterItem()
+
 
   )
 )
