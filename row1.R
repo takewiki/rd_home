@@ -8,7 +8,7 @@ rowItem <- function(){
     
     #第一行-----
     fluidRow(
-      column(width = 4,
+      column(width = 3,offset = 1,
              box(
                title = "资金分析主题展示", width = NULL, solidHeader = TRUE, status = "primary",
                tags$a(href='http://www.reshapedata.com/cashapp/#-en',
@@ -67,7 +67,7 @@ rowItem <- function(){
       )
     ),
     fluidRow(
-      column(width = 4,
+      column(width = 3,offset = 1,
              box(
                title = "实施工具", width = NULL, solidHeader = TRUE, status = "primary",
                tags$a(href='http://www.reshapedata.com/addrphonesplittor/',
