@@ -230,7 +230,24 @@ masterItem <- function(){
                                                             )
                                                             
                                                           )),
-                                                 tabPanel("下载中心 DLC", verbatimTextOutput("summary")),
+                                                 tabPanel("下载中心 DLC",     fluidRow(
+                                                   column(12,box(width = 12,      tabsetPanel(type = "tabs",
+                                                                                              tabPanel("KDC",   
+                                                                                                       h4(tags$a(href='http://reshapedata.com:3838/rdfiles/kdc/k3cloud_webapi_sdk-1.0.0-py3-none-any.whl',
+                                                                                                                          target='_blank',
+                                                                                                                          '金蝶云星空Python接口V1.0'
+                                                                                              ))),
+                                                                                              tabPanel("DT", verbatimTextOutput("summary")),
+                                                                                              tabPanel("IT", tableOutput("table")),
+                                                                                              
+                                                                                              tabPanel("RPA", tableOutput("table")),
+                                                                                              
+                                                                                              tabPanel("AI", tableOutput("table")),
+                                                                                              tabPanel("Others", tableOutput("table"))
+                                                                                              
+                                                   )))
+                                                   
+                                                 )),
                                                  tabPanel("文件中心 FSC", tableOutput("table")),
                                                  tabPanel("方案中心 SFC", tableOutput("table"))
                                                  
