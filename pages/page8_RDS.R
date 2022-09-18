@@ -1,10 +1,52 @@
-masterItem <- function(){
+RDSItem <- function(){
   
   res <-    tabPanel(
-    div(icon("calendar-alt"), "SMO运维中台"),
+    div(icon("calendar-alt"), "RDS关于我们"),
     
     fluidRow(
       column(12,box(width = 12,      tabsetPanel(type = "tabs",
+                                                 tabPanel("棱星集团", fluidRow(
+                                                   tabsetPanel(type = "tabs",
+                                                               tabPanel("集团简介", plotOutput("plot")),
+                                                               tabPanel("核心团队", plotOutput("plot")),
+                                                               tabPanel("数据产品", plotOutput("plot")),
+                                                               tabPanel("专业服务", plotOutput("plot")),
+                                                               tabPanel("合作伙伴", plotOutput("plot"))
+                                                               
+                                                               
+                                                               
+                                                               
+                                                               
+                                                               
+                                                   )
+                                                 )),
+                                                 tabPanel("成员企业", fluidRow(
+                                                   tabsetPanel(type = "tabs",
+                                                               tabPanel("上海棱星数据技术有限公司", plotOutput("plot")),
+                                                               tabPanel("苏州棱星数据技术有限公司", plotOutput("plot")),
+                                                               tabPanel("宿迁棱星数据技术有限公司", plotOutput("plot"))
+                                                               
+                                                               
+                                                               
+                                                               
+                                                               
+                                                               
+                                                   )
+                                                 )),
+                                                 tabPanel("集团动态", fluidRow(
+                                                   tabsetPanel(type = "tabs",
+                                                               tabPanel("公司动态", plotOutput("plot")),
+                                                               tabPanel("项目动态", plotOutput("plot")),
+                                                               tabPanel("B站:bilibili", plotOutput("plot")),
+                                                               tabPanel("微信公众号", plotOutput("plot"))
+                                                               
+                                                               
+                                                               
+                                                               
+                                                               
+                                                               
+                                                   )
+                                                 )),
                                                  tabPanel("管理平台 BSP",  #code here:
                                                           fluidRow(
                                                             column(width = 2,
@@ -249,7 +291,8 @@ masterItem <- function(){
                                                    
                                                  )),
                                                  tabPanel("文件中心 FSC", tableOutput("table")),
-                                                 tabPanel("方案中心 SFC", tableOutput("table"))
+                                                 tabPanel("方案中心 SFC", tableOutput("table")),
+                                                 tabPanel("联系我们@RDS", tableOutput("table"))
                                                  
       )))
 

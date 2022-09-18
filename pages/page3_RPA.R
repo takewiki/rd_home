@@ -1,4 +1,4 @@
-majourityItem <- function(){
+RPAItem <- function(){
   
   res <- tabPanel(
     div(icon("users"), "RPA数字员工"),

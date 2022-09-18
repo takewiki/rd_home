@@ -35,30 +35,49 @@ fluidPage(
   ),
   div(id = "header",
     div(id = "title",
-      "ReshapeData <- 业务 %>% 场景 %>% 方案 %>% 数据 %>% 模型 %>% 算法 %>%产品;"
+      "棱星数据:重塑数据价值！"
     ),
     hr(),
     div(id = "subtitle",
-        "print(ReshapeData);")
+        "业务数据化、流程自动化、管理可视化、运营智能化!")
 
   ),
   tabsetPanel(
     id = "mainnav",
     
-    columnItem(),
-    majourityItem(),
-    rowItem(),
+    #数据大屏----
+    DLSItem(),
+    
+    #数据中台----
+    DMSItem(),
+    
+    #数据员工
+    RPAItem(),
+    
+
+    #业务系统
+    BMSItem(),
+    
+    #解决方案
+    CMCItem(),
+    
    
-    seriesItem(),
-    bookItem()
+    
+   
+ 
+  
+   
+    #客户案例
+    CSCItem()
    
 
   ,
-  masterItem(),
-  tutorItem()
-   ,
+  RDUItem(),
+  
+  RDSItem()
+
     
-  guruItem()
+
 
    
 
