@@ -7,11 +7,11 @@ RDSItem <- function(){
       column(12,box(width = 12,      tabsetPanel(type = "tabs",
                                                  tabPanel("棱星集团", fluidRow(
                                                    tabsetPanel(type = "tabs",
-                                                               tabPanel("集团简介", plotOutput("plot")),
-                                                               tabPanel("核心团队", plotOutput("plot")),
-                                                               tabPanel("数据产品", plotOutput("plot")),
-                                                               tabPanel("专业服务", plotOutput("plot")),
-                                                               tabPanel("合作伙伴", plotOutput("plot"))
+                                                               tabPanel("集团简介", plotOutput("rds_intro")),
+                                                               tabPanel("核心团队", plotOutput("rds_team")),
+                                                               tabPanel("数据产品", plotOutput("rds_dp")),
+                                                               tabPanel("专业服务", plotOutput("rds_src")),
+                                                               tabPanel("合作伙伴", plotOutput("rds_ptn"))
                                                                
                                                                
                                                                
@@ -22,9 +22,9 @@ RDSItem <- function(){
                                                  )),
                                                  tabPanel("成员企业", fluidRow(
                                                    tabsetPanel(type = "tabs",
-                                                               tabPanel("上海棱星数据技术有限公司", plotOutput("plot")),
-                                                               tabPanel("苏州棱星数据技术有限公司", plotOutput("plot")),
-                                                               tabPanel("宿迁棱星数据技术有限公司", plotOutput("plot"))
+                                                               tabPanel("上海棱星数据技术有限公司", plotOutput("rds_sh")),
+                                                               tabPanel("苏州棱星数据技术有限公司", plotOutput("rds_sz")),
+                                                               tabPanel("宿迁棱星数据技术有限公司", plotOutput("rds_sq"))
                                                                
                                                                
                                                                
@@ -35,10 +35,10 @@ RDSItem <- function(){
                                                  )),
                                                  tabPanel("集团动态", fluidRow(
                                                    tabsetPanel(type = "tabs",
-                                                               tabPanel("公司动态", plotOutput("plot")),
-                                                               tabPanel("项目动态", plotOutput("plot")),
-                                                               tabPanel("B站:bilibili", plotOutput("plot")),
-                                                               tabPanel("微信公众号", plotOutput("plot"))
+                                                               tabPanel("公司动态", plotOutput("news_group")),
+                                                               tabPanel("项目动态", plotOutput("news_projects")),
+                                                               tabPanel("B站:bilibili", plotOutput("news_bilibili")),
+                                                               tabPanel("微信公众号", plotOutput("news_weixin"))
                                                                
                                                                
                                                                
@@ -279,20 +279,20 @@ RDSItem <- function(){
                                                                                                                           target='_blank',
                                                                                                                           '金蝶云星空Python接口V1.0'
                                                                                               ))),
-                                                                                              tabPanel("DT", verbatimTextOutput("summary")),
-                                                                                              tabPanel("IT", tableOutput("table")),
+                                                                                              tabPanel("DT", verbatimTextOutput("dl_DT")),
+                                                                                              tabPanel("IT", tableOutput("dl_IT")),
                                                                                               
-                                                                                              tabPanel("RPA", tableOutput("table")),
+                                                                                              tabPanel("RPA", tableOutput("dl_rpa")),
                                                                                               
-                                                                                              tabPanel("AI", tableOutput("table")),
-                                                                                              tabPanel("Others", tableOutput("table"))
+                                                                                              tabPanel("AI", tableOutput("dl_ai")),
+                                                                                              tabPanel("Others", tableOutput("dl_ot"))
                                                                                               
                                                    )))
                                                    
                                                  )),
-                                                 tabPanel("文件中心 FSC", tableOutput("table")),
-                                                 tabPanel("方案中心 SFC", tableOutput("table")),
-                                                 tabPanel("联系我们@RDS", tableOutput("table"))
+                                                 tabPanel("文件中心 FSC", tableOutput("fsc")),
+                                                 tabPanel("方案中心 SFC", tableOutput("sfc")),
+                                                 tabPanel("联系我们@RDS", tableOutput("cus"))
                                                  
       )))
 

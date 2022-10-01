@@ -8,7 +8,7 @@ DLSItem <- function()
                                   tabPanel("资金管理大屏", 
                                            fluidRow(
                                              
-                                             tags$a(href='http://www.reshapedata.com/cashapp/#-en',
+                                             tags$a(href='http://reshapedata.com:30081/#-en',
                                                     target='_blank',
                                                     
                                                     '资金分析系统Demo'),
@@ -24,23 +24,23 @@ DLSItem <- function()
                                            
                                           )),
                                   tabPanel("投资管理大屏", 
-                                           tags$a(href='http://www.reshapedata.com/invest/#-en',
+                                           tags$a(href='http://reshapedata.com:30083/#-en',
                                                   target='_blank',
                                                   '项目投资收益分析'),
                                            box(title = '股票工具',
                                                width = NULL, background = "black",
-                                               tags$a(href='http://www.reshapedata.com/gupiao/',
+                                               tags$a(href='http://reshapedata.com:30085/',
                                                       target='_blank',
                                                       '股票代码查询')
                                            )
                                            
                                            ),
-                                  tabPanel("销售管理大屏",  tags$a(href='http://www.reshapedata.com/chinagdp/#-en',
+                                  tabPanel("销售管理大屏",  tags$a(href='http://reshapedata.com:30087/#-en',
                                                              target='_blank',
                                                              '2012-2014GDP数据地图演示')),
                                   tabPanel("采购管理大屏", box(
                                     title = "多维分析", width = NULL, solidHeader = TRUE,
-                                    tags$a(href='http://www.reshapedata.com/cuberpt/#-en',
+                                    tags$a(href='http://reshapedata.com:30089/#-en',
                                            target='_blank',
                                            '多维报表查询'
                                     )
@@ -58,7 +58,7 @@ DLSItem <- function()
                                     ) 
                                     
                                   )),
-                                  tabPanel("CEO大屏",  tags$a(href='http://www.reshapedata.com/dashboard/#-en',
+                                  tabPanel("CEO大屏",  tags$a(href='http://reshapedata.com:30091/#-en',
                                                             target='_blank',
                                                             'BI功能展示'),
                                            box(

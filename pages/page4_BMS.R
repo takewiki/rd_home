@@ -3,15 +3,15 @@ BMSItem <- function(){
     div(icon("object-group"), "BMS业务系统"),
     fluidRow(
       column(12,box(width = 12,     tabsetPanel(type = "tabs",selected = '成本管理',
-                                     tabPanel("ERP", plotOutput("plot")),
-                                     tabPanel("OA", tableOutput("table")),
-                                     tabPanel("HRMS", tableOutput("table")),
-                                     tabPanel("CRM", tableOutput("table")),
-                                     tabPanel("SRM", tableOutput("table")),
-                                     tabPanel("MES", tableOutput("table")),
-                                     tabPanel("PLM", tableOutput("table")),
-                                     tabPanel("APS", tableOutput("table")),
-                                     tabPanel("WMS", tableOutput("table"))
+                                     tabPanel("ERP", plotOutput("bms_erp")),
+                                     tabPanel("OA", tableOutput("bms_oa")),
+                                     tabPanel("HRMS", tableOutput("bms_hrms")),
+                                     tabPanel("CRM", tableOutput("bms_crm")),
+                                     tabPanel("SRM", tableOutput("bms_srm")),
+                                     tabPanel("MES", tableOutput("bms_mes")),
+                                     tabPanel("PLM", tableOutput("bms_plm")),
+                                     tabPanel("APS", tableOutput("bms_aps")),
+                                     tabPanel("WMS", tableOutput("bms_wms"))
                                      
       )))
  

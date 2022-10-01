@@ -4,10 +4,10 @@ RDUItem <- function(){
     div(icon("shapes"), "RDU棱星大数据学院"),
     fluidRow(
       column(12,box(width = 12,      tabsetPanel(type = "tabs",
-                                                 tabPanel("统计", plotOutput("plot")),
-                                                 tabPanel("数学", verbatimTextOutput("summary")),
-                                                 tabPanel("管理会计", verbatimTextOutput("summary")),
-                                                 tabPanel("经营会计", tableOutput("table")),
+                                                 tabPanel("统计", plotOutput("rdu_statistic")),
+                                                 tabPanel("数学", verbatimTextOutput("rdu_math")),
+                                                 tabPanel("管理会计", verbatimTextOutput("rdu_cma")),
+                                                 tabPanel("经营会计", tableOutput("rdu_boa")),
                                                  
                                                  
                                                  
@@ -18,24 +18,24 @@ RDUItem <- function(){
                                                  
                                                  tabPanel("成本会计",     fluidRow(
                                                    column(12,box(width = 12,      tabsetPanel(type = "tabs",selected = '标准成本',
-                                                                                              tabPanel("实际成本-品种法", plotOutput("plot")),
-                                                                                              tabPanel("实际成本-分批法", verbatimTextOutput("summary")),
-                                                                                              tabPanel("实际成本-分类法", tableOutput("table")),
-                                                                                              tabPanel("实际成本-生产用料清单还原法", tableOutput("table")),
-                                                                                              tabPanel("实际成本-工序法", tableOutput("table")),
-                                                                                              tabPanel("标准成本", tableOutput("table")),
-                                                                                              tabPanel("订单成本", tableOutput("table")),
-                                                                                              tabPanel("项目成本", tableOutput("table"))
+                                                                                              tabPanel("实际成本-品种法", plotOutput("co_prd")),
+                                                                                              tabPanel("实际成本-分批法", verbatimTextOutput("co_batch")),
+                                                                                              tabPanel("实际成本-分类法", tableOutput("co_cat")),
+                                                                                              tabPanel("实际成本-生产用料清单还原法", tableOutput("co_ppbom")),
+                                                                                              tabPanel("实际成本-工序法", tableOutput("co_rt")),
+                                                                                              tabPanel("标准成本", tableOutput("co_std")),
+                                                                                              tabPanel("订单成本", tableOutput("co_order")),
+                                                                                              tabPanel("项目成本", tableOutput("co_prj"))
                                                                                               
                                                    )))
                                                    
                                                  )),
-                                                 tabPanel("Tensor", tableOutput("table")),
+                                                 tabPanel("Tensor", tableOutput("rdu_tensor")),
                                                  
-                                                 tabPanel("NLP", tableOutput("table")),
+                                                 tabPanel("NLP", tableOutput("rdu_nlp")),
                                                  
-                                                 tabPanel("DNN", tableOutput("table")),
-                                                 tabPanel("计算视觉", tableOutput("table")),
+                                                 tabPanel("DNN", tableOutput("rdu_dnn")),
+                                                 tabPanel("计算视觉", tableOutput("rdu_cv")),
                                                  tabPanel("R",   fluidRow(
                                                    column(width = 3,offset = 1,
                                                           box(
@@ -557,73 +557,82 @@ RDUItem <- function(){
                                                  )),
                                                  tabPanel("Python",     fluidRow(
                                                    column(12,box(width = 12,            tabsetPanel(type = "tabs",
-                                                                                                    tabPanel("os", plotOutput("plot")),
-                                                                                                    tabPanel("numpy", verbatimTextOutput("summary")),
-                                                                                                    tabPanel("pandas", tableOutput("table")),
-                                                                                                    tabPanel("matplotlib", tableOutput("table")),
-                                                                                                    tabPanel("scipy", tableOutput("table")),
-                                                                                                    tabPanel("random", tableOutput("table")),
-                                                                                                    tabPanel("Ansible", tableOutput("table")),
-                                                                                                    tabPanel("apscheduler", tableOutput("table")),
-                                                                                                    tabPanel("paramiko", tableOutput("table")),
-                                                                                                    tabPanel("celery", tableOutput("table")),
-                                                                                                    tabPanel("apache-airflow", tableOutput("table"))
+                                                                                                    tabPanel("os", plotOutput("py_os")),
+                                                                                                    tabPanel("numpy", verbatimTextOutput("py_numpy")),
+                                                                                                    tabPanel("pandas", tableOutput("py_pandas")),
+                                                                                                    tabPanel("matplotlib", tableOutput("py_matplotlib")),
+                                                                                                    tabPanel("scipy", tableOutput("py_scipy")),
+                                                                                                    tabPanel("random", tableOutput("py_random")),
+                                                                                                    tabPanel("Ansible", tableOutput("py_ansible")),
+                                                                                                    tabPanel("apscheduler", tableOutput("py_apscheduler")),
+                                                                                                    tabPanel("paramiko", tableOutput("py_paramiko")),
+                                                                                                    tabPanel("celery", tableOutput("py_celery")),
+                                                                                                    tabPanel("apache-airflow", tableOutput("py_airflow"))
                                                                                                     
                                                    )))
                                                    
                                                  )),
                                                  tabPanel("SQL", fluidRow(
                                                    column(12,box(width = 12,              tabsetPanel(type = "tabs",
-                                                                                                      tabPanel("connection & Login", plotOutput("plot")),
-                                                                                                      tabPanel("table", verbatimTextOutput("summary")),
-                                                                                                      tabPanel("select", tableOutput("table")),
-                                                                                                      tabPanel("update", tableOutput("table")),
-                                                                                                      tabPanel("delete", tableOutput("table")),
-                                                                                                      tabPanel("insert", tableOutput("table")),
-                                                                                                      tabPanel("view", tableOutput("table")),
-                                                                                                      tabPanel("index", tableOutput("table")),
-                                                                                                      tabPanel("store procedure", tableOutput("table")),
-                                                                                                      tabPanel("trigger", tableOutput("table")),
-                                                                                                      tabPanel("cursor", tableOutput("table")),
-                                                                                                      tabPanel("transaction and lock", tableOutput("table")),
-                                                                                                      tabPanel("backup & restore", tableOutput("table")),
-                                                                                                      tabPanel("safety", tableOutput("table"))
+                                                                                                      tabPanel("connection & Login", plotOutput("sql_login")),
+                                                                                                      tabPanel("table", verbatimTextOutput("sql_table")),
+                                                                                                      tabPanel("select", tableOutput("sql_select")),
+                                                                                                      tabPanel("update", tableOutput("sql_update")),
+                                                                                                      tabPanel("delete", tableOutput("sql_del")),
+                                                                                                      tabPanel("insert", tableOutput("sql_ins")),
+                                                                                                      tabPanel("view", tableOutput("sql_view")),
+                                                                                                      tabPanel("index", tableOutput("sql_index")),
+                                                                                                      tabPanel("store procedure", tableOutput("sql_sp")),
+                                                                                                      tabPanel("trigger", tableOutput("sql_trigger")),
+                                                                                                      tabPanel("cursor", tableOutput("sql_cursor")),
+                                                                                                      tabPanel("transaction and lock", tableOutput("sql_lock")),
+                                                                                                      tabPanel("backup & restore", tableOutput("sql_bak")),
+                                                                                                      tabPanel("safety", tableOutput("sql_safety"))
                                                                                                       
                                                    )))
                                                    
                                                  )),
-                                                 tabPanel("NoSQL", tableOutput("table")),
-                                                 tabPanel("Julia", tableOutput("table")),
-                                                 tabPanel("Go", tableOutput("table")),
-                                                 tabPanel("C++", tableOutput("table")),
-                                                 tabPanel("Java", tableOutput("table")),
-                                                 tabPanel("PHP", tableOutput("table")),
-                                                 tabPanel("JS", tableOutput("table")),
-                                                 tabPanel("docker", tableOutput("table")),
-                                                 tabPanel("kubernetes", tableOutput("table")),
-                                                 tabPanel("Hadoop", tableOutput("table")),
+                                                 tabPanel("NoSQL", tableOutput("rdu_nosql")),
+                                                 tabPanel("Julia", tableOutput("rdu_julia")),
+                                                 tabPanel("Go", tableOutput("rdu_go")),
+                                                 tabPanel("C++", tableOutput("rdu_cpp")),
+                                                 tabPanel("Java", tableOutput("rdu_java")),
+                                                 tabPanel("PHP", tableOutput("rdu_php")),
+                                                 tabPanel("JS", tableOutput("rdu_js")),
+                                                 tabPanel("docker", 
+                                                          
+                                                          shiny::fluidRow(
+                                                            actionButton(inputId = 'docker_images_query',label = '查询'),
+                                                            tsui::mdl_dataTable(id = 'docker_images_dt')
+                                                          )
+                                                          
+                                                        
+                                                          
+                                                          ),
+                                                 tabPanel("kubernetes", tableOutput("rdu_k8s")),
+                                                 tabPanel("Hadoop", tableOutput("rdu_hdp")),
                                                  tabPanel("华为云",     fluidRow(
                                                    column(12,box(width = 12,                 tabsetPanel(type = "tabs",
-                                                                                                         tabPanel("云服务器 HECS", plotOutput("plot")),
-                                                                                                         tabPanel("云容器实例 CCI", verbatimTextOutput("summary")),
-                                                                                                         tabPanel("云容器引擎 CCE", tableOutput("table")),
-                                                                                                         tabPanel("集成平台ROMA", tableOutput("table")),
-                                                                                                         tabPanel("AI平台 ModelArts", tableOutput("table")),
-                                                                                                         tabPanel("对象存储 OBS", tableOutput("table")),
-                                                                                                         tabPanel("数据湖 DAYU", tableOutput("table")),
-                                                                                                         tabPanel("区块链 BCS", tableOutput("table")),
-                                                                                                         tabPanel("缓存服务 Redis", tableOutput("table")),
-                                                                                                         tabPanel("云数据库 GaussDB", tableOutput("table"))
+                                                                                                         tabPanel("云服务器 HECS", plotOutput("rdu_hecs")),
+                                                                                                         tabPanel("云容器实例 CCI", verbatimTextOutput("rdu_cci")),
+                                                                                                         tabPanel("云容器引擎 CCE", tableOutput("rdu_cce")),
+                                                                                                         tabPanel("集成平台ROMA", tableOutput("rdu_roma")),
+                                                                                                         tabPanel("AI平台 ModelArts", tableOutput("rdu_ma")),
+                                                                                                         tabPanel("对象存储 OBS", tableOutput("rdu_obs")),
+                                                                                                         tabPanel("数据湖 DAYU", tableOutput("rdu_dayu")),
+                                                                                                         tabPanel("区块链 BCS", tableOutput("rdu_bcs")),
+                                                                                                         tabPanel("缓存服务 Redis", tableOutput("rdu_redis")),
+                                                                                                         tabPanel("云数据库 GaussDB", tableOutput("rdu_gdb"))
                                                                                                          
                                                    )))
                                                    
                                                  )),
                                                  tabPanel("腾讯云", fluidRow(
                                                    column(12,box(width = 12,         tabsetPanel(type = "tabs",
-                                                                                                 tabPanel("云服务器 ECS", plotOutput("plot")),
-                                                                                                 tabPanel("对象存储 COS", verbatimTextOutput("summary")),
-                                                                                                 tabPanel("区块链TBaaS", tableOutput("table")),
-                                                                                                 tabPanel("微信小程序", tableOutput("table"))
+                                                                                                 tabPanel("云服务器 ECS", plotOutput("rdu_qc_ecs")),
+                                                                                                 tabPanel("对象存储 COS", verbatimTextOutput("rdu_qc_cos")),
+                                                                                                 tabPanel("区块链TBaaS", tableOutput("rdu_qc_tbaas")),
+                                                                                                 tabPanel("微信小程序", tableOutput("rdu_qc_app"))
                                                                                                  
                                                                                                  
                                                    )))
@@ -632,8 +641,8 @@ RDUItem <- function(){
                                                  tabPanel("阿里云", 
                                                           fluidRow(
                                                             column(12,box(width = 12,      tabsetPanel(type = "tabs",
-                                                                                                       tabPanel("数据可视化 DataV", plotOutput("plot")),
-                                                                                                       tabPanel("云解析 DNS", verbatimTextOutput("summary"))
+                                                                                                       tabPanel("数据可视化 DataV", plotOutput("rdu_ali_datav")),
+                                                                                                       tabPanel("云解析 DNS", verbatimTextOutput("rdu_ali_dns"))
                                                                                                        
                                                                                                        
                                                                                                        
@@ -643,10 +652,10 @@ RDUItem <- function(){
                                                  tabPanel("百度云", 
                                                           fluidRow(
                                                             column(12,box(width = 12,         tabsetPanel(type = "tabs",
-                                                                                                          tabPanel("文字识别 OCR", plotOutput("plot")),
-                                                                                                          tabPanel("区块链引擎 BBE", verbatimTextOutput("summary")),
-                                                                                                          tabPanel("自然语言处理 NLP", verbatimTextOutput("summary")),
-                                                                                                          tabPanel("文心 ERNIE", verbatimTextOutput("summary"))
+                                                                                                          tabPanel("文字识别 OCR", plotOutput("rdu_bd_ocr")),
+                                                                                                          tabPanel("区块链引擎 BBE", verbatimTextOutput("rdu_bd_bbe")),
+                                                                                                          tabPanel("自然语言处理 NLP", verbatimTextOutput("rdu_bd_nlp")),
+                                                                                                          tabPanel("文心 ERNIE", verbatimTextOutput("rdu_bd_ernie"))
                                                                                                           
                                                                                                           
                                                                                                           
@@ -656,12 +665,12 @@ RDUItem <- function(){
                                                  ),
                                                  tabPanel("京东云",        fluidRow(
                                                    column(12,box(width = 12,            tabsetPanel(type = "tabs",
-                                                                                                    tabPanel("函数服务", plotOutput("plot")),
-                                                                                                    tabPanel("数据大屏", verbatimTextOutput("summary")),
-                                                                                                    tabPanel("云数据库 InfluxDB", verbatimTextOutput("summary")),
-                                                                                                    tabPanel("物联网管理平台", verbatimTextOutput("summary")),
-                                                                                                    tabPanel("智臻链BaaS平台", verbatimTextOutput("summary")),
-                                                                                                    tabPanel("人工智能 NeuHub", verbatimTextOutput("summary"))
+                                                                                                    tabPanel("函数服务", plotOutput("rdu_jd_f")),
+                                                                                                    tabPanel("数据大屏", verbatimTextOutput("rdu_jd_dls")),
+                                                                                                    tabPanel("云数据库 InfluxDB", verbatimTextOutput("rdu_jd_idb")),
+                                                                                                    tabPanel("物联网管理平台", verbatimTextOutput("rdu_jd_iot")),
+                                                                                                    tabPanel("智臻链BaaS平台", verbatimTextOutput("rdu_jd_baas")),
+                                                                                                    tabPanel("人工智能 NeuHub", verbatimTextOutput("rdu_jd_nhb"))
                                                                                                     
                                                                                                     
                                                                                                     
@@ -683,12 +692,12 @@ RDUItem <- function(){
                                                    column(12,box(width = 12,    tabsetPanel(type = "tabs",
                                                                                             tabPanel("语音识别", fluidRow(
                                                                                               tabsetPanel(type = "tabs",
-                                                                                                          tabPanel("语音听写", plotOutput("plot")),
-                                                                                                          tabPanel("离线语音听写", plotOutput("plot")),
-                                                                                                          tabPanel("语音转写", plotOutput("plot")),
-                                                                                                          tabPanel("语音唤醒", plotOutput("plot")),
-                                                                                                          tabPanel("实时语音转写", plotOutput("plot")),
-                                                                                                          tabPanel("离线命令词识别", plotOutput("plot"))
+                                                                                                          tabPanel("语音听写", plotOutput("rdu_if_sd")),
+                                                                                                          tabPanel("离线语音听写", plotOutput("rdu_if_sdol")),
+                                                                                                          tabPanel("语音转写", plotOutput("rdu_if_sw")),
+                                                                                                          tabPanel("语音唤醒", plotOutput("rdu_if_call")),
+                                                                                                          tabPanel("实时语音转写", plotOutput("rdu_if_swrt")),
+                                                                                                          tabPanel("离线命令词识别", plotOutput("rdu_if_cmd"))
                                                                                                           
                                                                                                           
                                                                                                           
@@ -699,12 +708,12 @@ RDUItem <- function(){
                                                                                             )),
                                                                                             tabPanel("语音合成", fluidRow(
                                                                                               tabsetPanel(type = "tabs",
-                                                                                                          tabPanel("在线语音合成", plotOutput("plot")),
-                                                                                                          tabPanel("离线语音合成(普通版)", plotOutput("plot")),
-                                                                                                          tabPanel("离线语音合成(高品质版）", plotOutput("plot")),
-                                                                                                          tabPanel("音库定制", plotOutput("plot")),
-                                                                                                          tabPanel("娱乐变声", plotOutput("plot")),
-                                                                                                          tabPanel("离线命令词识别", plotOutput("plot"))
+                                                                                                          tabPanel("在线语音合成", plotOutput("rdu_if_sc1")),
+                                                                                                          tabPanel("离线语音合成(普通版)", plotOutput("rdu_if_sc2")),
+                                                                                                          tabPanel("离线语音合成(高品质版）", plotOutput("rdu_if_sc3")),
+                                                                                                          tabPanel("音库定制", plotOutput("rdu_if_sc4")),
+                                                                                                          tabPanel("娱乐变声", plotOutput("rdu_if_sc5")),
+                                                                                                          tabPanel("离线命令词识别", plotOutput("rdu_if_sc6"))
                                                                                                           
                                                                                                           
                                                                                                           
@@ -715,10 +724,10 @@ RDUItem <- function(){
                                                                                             )),
                                                                                             tabPanel("语音分析", fluidRow(
                                                                                               tabsetPanel(type = "tabs",
-                                                                                                          tabPanel("语音评测", plotOutput("plot")),
-                                                                                                          tabPanel("性别年龄识别", plotOutput("plot")),
-                                                                                                          tabPanel("声纹识别", plotOutput("plot")),
-                                                                                                          tabPanel("歌曲识别", plotOutput("plot"))
+                                                                                                          tabPanel("语音评测", plotOutput("rdu_if_sda1")),
+                                                                                                          tabPanel("性别年龄识别", plotOutput("rdu_if_sda2")),
+                                                                                                          tabPanel("声纹识别", plotOutput("rdu_if_sda3")),
+                                                                                                          tabPanel("歌曲识别", plotOutput("rdu_if_sda4"))
                                                                                                           
                                                                                                           
                                                                                                           
@@ -730,10 +739,10 @@ RDUItem <- function(){
                                                                                             )),
                                                                                             tabPanel("多语种技术",  fluidRow(
                                                                                               tabsetPanel(type = "tabs",
-                                                                                                          tabPanel("多语种识别", plotOutput("plot")),
-                                                                                                          tabPanel("多语种合成", plotOutput("plot")),
-                                                                                                          tabPanel("多语种翻译", plotOutput("plot")),
-                                                                                                          tabPanel("多语种文字识别", plotOutput("plot"))
+                                                                                                          tabPanel("多语种识别", plotOutput("rdu_if_bl1")),
+                                                                                                          tabPanel("多语种合成", plotOutput("rdu_if_bl2")),
+                                                                                                          tabPanel("多语种翻译", plotOutput("rdu_if_bl3")),
+                                                                                                          tabPanel("多语种文字识别", plotOutput("rdu_if_bl4"))
                                                                                                           
                                                                                                           
                                                                                                           
@@ -745,8 +754,8 @@ RDUItem <- function(){
                                                                                             )),
                                                                                             tabPanel("语音硬件",  fluidRow(
                                                                                               tabsetPanel(type = "tabs",
-                                                                                                          tabPanel("MT8516开发套件", plotOutput("plot")),
-                                                                                                          tabPanel("XR872开发套件", plotOutput("plot"))
+                                                                                                          tabPanel("MT8516开发套件", plotOutput("rdu_if_iot1")),
+                                                                                                          tabPanel("XR872开发套件", plotOutput("rdu_if_iot2"))
                                                                                                           
                                                                                                           
                                                                                                           
@@ -756,9 +765,9 @@ RDUItem <- function(){
                                                                                                           
                                                                                               )
                                                                                             )),
-                                                                                            tabPanel("机器翻译", plotOutput("plot")),
-                                                                                            tabPanel("人机交互技术", plotOutput("plot")),
-                                                                                            tabPanel("自然语言处理", plotOutput("plot"))
+                                                                                            tabPanel("机器翻译", plotOutput("rdu_if_trans")),
+                                                                                            tabPanel("人机交互技术", plotOutput("rdu_if_mme")),
+                                                                                            tabPanel("自然语言处理", plotOutput("rdu_if_nlp"))
                                                                                             
                                                                                             
                                                                                             
@@ -769,8 +778,8 @@ RDUItem <- function(){
                                                  )),
                                                  tabPanel("LattePanda", fluidRow(
                                                    tabsetPanel(type = "tabs",
-                                                               tabPanel("Alpha", plotOutput("plot")),
-                                                               tabPanel("Delta", plotOutput("plot"))
+                                                               tabPanel("Alpha", plotOutput("Alpha")),
+                                                               tabPanel("Delta", plotOutput("Delta"))
                                                                
                                                                
                                                                
@@ -781,9 +790,9 @@ RDUItem <- function(){
                                                  )),
                                                  tabPanel("GPU加速", fluidRow(
                                                    tabsetPanel(type = "tabs",
-                                                               tabPanel("GPU", plotOutput("plot")),
-                                                               tabPanel("CUDA", plotOutput("plot")),
-                                                               tabPanel("CuDNN", plotOutput("plot"))
+                                                               tabPanel("GPU", plotOutput("GPU")),
+                                                               tabPanel("CUDA", plotOutput("CUDA")),
+                                                               tabPanel("CuDNN", plotOutput("CuDNN"))
                                                                
                                                                
                                                                
