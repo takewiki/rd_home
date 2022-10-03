@@ -47,12 +47,14 @@ DLSItem <- function()
                                   )),
                                   tabPanel("财务管理大屏",   box(
                                     title = "发票管理", width = NULL, solidHeader = TRUE, status = "primary",
-                                    tags$a(href='http://www.reshapedata.com/addrphonesplittor/',
+                                    tags$a(href='http://reshapedata.com:30093/',
                                            target='_blank',
                                            '号码地址分离器'
                                     ),
                                     br(),
-                                    tags$a(href='http://www.reshapedata.com/wikitableconvertor/',
+                                    br(),
+                                    br(),
+                                    tags$a(href='http://reshapedata.com:30095/',
                                            target='_blank',
                                            '知识库表格转换器'
                                     ) 
@@ -63,18 +65,20 @@ DLSItem <- function()
                                                             'BI功能展示'),
                                            box(
                                              title = "统计建模", width = NULL, background = "maroon",
-                                             tags$a(href='http://www.reshapedata.com/statdesc/',
+                                             tags$a(href='http://www.reshapedata.com:30097/',
                                                     target='_blank',
                                                     '描述性统计-两变量散点分析')
                                            )),
                                   tabPanel("实验室大屏",  box(
                                     title = "自动报告", width = NULL, background = "light-blue",
-                                    tags$a(href='http://www.reshapedata.com/autorpt/#-en',
+                                    tags$a(href='http://reshapedata.com:30099/#-en',
                                            target='_blank',
                                            '自助上传下载分析报告'
                                     ),
                                     br(),
-                                    tags$a(href='http://www.reshapedata.com/interactiverpt/',
+                                    br(),
+                                    br(),
+                                    tags$a(href='http://reshapedata.com:30079/',
                                            target='_blank',
                                            '自助调参下载报告'
                                     )
