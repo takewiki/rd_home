@@ -14,7 +14,19 @@ BMSItem <- function(){
                                               br(),
                                               tags$a(href='http://www.tensorstudio.com:33306/mysql/',
                                                      target='_blank',
-                                                     'CRM@CP 数据库')
+                                                     'CRM@CP 数据库'),
+                                              
+                                              br(),
+                                              br(),
+                                              tags$a(href='http://www.tensorstudio.com:89/crm/',
+                                                     target='_blank',
+                                                     'CRM@CP 测试环境-站点2,客户供应商查重'),
+                                              br(),
+                                              br(),
+                                              br(),
+                                              tags$a(href='http://www.tensorstudio.com:33309/mysql/',
+                                                     target='_blank',
+                                                     'CRM@CP 数据库2')
                                               
                                               
                                               
@@ -26,9 +38,16 @@ BMSItem <- function(){
                                      tabPanel("GridStudio", tags$a(href='http://reshapedata.com:8080/',
                                                                    target='_blank',
                                                                    '在线Excel&Python Studio')),
-                                     tabPanel("KMS", tags$a(href='http://www.tensorstudio.com:8401/',
+                                     tabPanel("KMS", tags$a(href='http://106.54.172.90:8401/',
                                                              target='_blank',
-                                                             '棱星知识管理-站点:未配置数据库')),
+                                                             '棱星知识管理-主站点')
+                                             
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              ),
                                      tabPanel("Docker Repo服务", tags$a(href='http://www.tensorvip.com:5000/v2/',
                                                                       target='_blank',
                                                                       'Docker镜像存储服务@RDU')),
