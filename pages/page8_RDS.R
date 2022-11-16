@@ -5,6 +5,51 @@ RDSItem <- function(){
     
     fluidRow(
       column(12,box(width = 12,      tabsetPanel(type = "tabs",
+                                             
+                                                 tabPanel("集团动态", fluidRow(
+                                                   tabsetPanel(type = "tabs",
+                                                               tabPanel("公司动态", 
+                                                                        tags$a(href='https://wlxy.squ.edu.cn/info/1023/2580.htm',
+                                                                               target='_blank',
+                                                                               '宿迁学院文理学院简介'),
+                                                                        br(),
+                                                                        tags$a(href='https://www.squ.edu.cn/info/1004/10785.htm',
+                                                                                       target='_blank',
+                                                                                       '2021-04-13:文理学院与上海棱星数据技术有限公司签订合作协议——双创中心'),
+                                                                        br(),
+                                                                        tags$a(href='https://www.squ.edu.cn/info/1002/11133.htm',
+                                                                               target='_blank',
+                                                                               '2021-06-29:我校举行产教融合签约暨产业学院揭牌仪式——棱星大数据学院成立'),
+                                                                        br(),
+                                                                        tags$a(href='https://wlxy.squ.edu.cn/info/1047/2103.htm',
+                                                                               target='_blank',
+                                                                               '2021-11-05:文理学院举办江苏省一流专业建设论坛——学科建设'),
+                                                                        br(),
+                                                                        tags$a(href='https://www.squ.edu.cn/info/1002/11680.htm',
+                                                                               target='_blank',
+                                                                               '2021-12-05:文理学院首届校政企协作发展大会：15家单位纵论三联三融——产教融合'),
+                                                                        br(),
+                                                                        tags$a(href='https://wlxy.squ.edu.cn/info/1047/2658.htm',
+                                                                               target='_blank',
+                                                                               '2022-09-23:评估认证专题系列报道（三十七）——文理学院举行产教融合建设研讨会'),
+                                                                        br(),
+                                                                        tags$a(href='https://wlxy.squ.edu.cn/info/1046/2671.htm',
+                                                                               target='_blank',
+                                                                               '2022-09-23:文理学院举行产教融合建设研讨会——捐赠科研设备')
+                                                                        ),
+                                                               
+                                                               
+                                                               tabPanel("项目动态", plotOutput("news_projects")),
+                                                               tabPanel("B站:bilibili", plotOutput("news_bilibili")),
+                                                               tabPanel("微信公众号", plotOutput("news_weixin"))
+                                                               
+                                                               
+                                                               
+                                                               
+                                                               
+                                                               
+                                                   )
+                                                 )),
                                                  tabPanel("棱星集团", fluidRow(
                                                    tabsetPanel(type = "tabs",
                                                                tabPanel("集团简介", plotOutput("rds_intro")),
@@ -25,20 +70,6 @@ RDSItem <- function(){
                                                                tabPanel("上海棱星数据技术有限公司", plotOutput("rds_sh")),
                                                                tabPanel("苏州棱星数据技术有限公司", plotOutput("rds_sz")),
                                                                tabPanel("宿迁棱星数据技术有限公司", plotOutput("rds_sq"))
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                   )
-                                                 )),
-                                                 tabPanel("集团动态", fluidRow(
-                                                   tabsetPanel(type = "tabs",
-                                                               tabPanel("公司动态", plotOutput("news_group")),
-                                                               tabPanel("项目动态", plotOutput("news_projects")),
-                                                               tabPanel("B站:bilibili", plotOutput("news_bilibili")),
-                                                               tabPanel("微信公众号", plotOutput("news_weixin"))
                                                                
                                                                
                                                                
