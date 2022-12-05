@@ -63,7 +63,43 @@ BMSItem <- function(){
                                                      target='_blank',
                                                      '赛普OA-外网访问')
                                               ),
-                                     tabPanel("CRM", tags$a(href='http://www.tensorstudio.com:88/crm/',
+                                     tabPanel("CRM", 
+                                              
+                                              tags$a(href='http://106.54.172.90:9999/crm/',
+                                                     target='_blank',
+                                                     '棱星数据管理平台'),
+                                              br(),
+                                              tags$a(href='https://rds-1251945645.cos.ap-shanghai.myqcloud.com/mngr/video/rds_crm_manual_exp_billPrepared.mp4',
+                                                     target='_blank',
+                                                     '步骤1:费用报销单-制单'),
+                                              br(),
+                                              tags$a(href='https://rds-1251945645.cos.ap-shanghai.myqcloud.com/mngr/video/rds_crm_manual_exp_checklevel1.mp4',
+                                                     target='_blank',
+                                                     '步骤2:费用报销单-单据合规性审核'),
+                                              br(),
+                                              tags$a(href='https://rds-1251945645.cos.ap-shanghai.myqcloud.com/mngr/video/rds_crm_manual_exp_checklevel2.mp4',
+                                                     target='_blank',
+                                                     '步骤3:费用报销单-业务真实性审批'),
+                                              br(),
+                                              tags$a(href='https://rds-1251945645.cos.ap-shanghai.myqcloud.com/mngr/video/rds_crm_manual_exp_print.mp4',
+                                                     target='_blank',
+                                                     '步骤4:费用报销单-单据打印,张贴原始凭证'),
+                                              br(),
+                                              tags$a(href='https://rds-1251945645.cos.ap-shanghai.myqcloud.com/mngr/video/rds_crm_manual_rptExport.mp4',
+                                                     target='_blank',
+                                                     '步骤5:费用报销单-导出费用报销单列表至Excel'),
+                                              br(),
+                                         
+                                              br(),
+                                              br(),
+                                              br(),
+                                              br(),
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              tags$a(href='http://www.tensorstudio.com:88/crm/',
                                                             target='_blank',
                                                             'CRM@CP 测试环境-站点1,旧物料编码'),
                                               br(),
